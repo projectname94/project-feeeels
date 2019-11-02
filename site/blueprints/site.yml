@@ -1,3 +1,112 @@
 title: Site
-preset: pages
 unlisted: true
+templates:
+  - issue
+  - error
+
+tabs:
+
+  pages:
+    label: Site Overview
+    sections:
+      drafts:
+        headline: Drafts
+        type: pages
+        layout: list
+        status: draft
+        templates: 
+          - issue
+
+      published:
+        headline: Published Pages
+        type: pages
+        layout: list
+        status: listed
+        templates: 
+          - issue
+
+      files:
+        headline: Files
+        type: files
+        layout: list
+      
+      content:
+        type: fields
+        fields:
+          site_management:
+            label: Site Management
+            type: headline
+          site_logo:
+            label: Logo File
+            help: (overrides title, SVG)
+            type: files
+            multiple: false
+            width: 1/2
+          placeholder:
+            label: Placeholder SVGs
+            type: files
+            width: 1/2
+          seo_image:
+            label: Sitewide SEO Image
+            type: files
+            multiple: false
+            width: 1/2
+          favicon:
+            label: Favicon
+            type: files
+            multiple: false
+            help: png file at 160px x 160px
+            width: 1/2
+          seo_description:
+            label: SEO Site Description
+            type: textarea
+            size: small
+            width: 1/2
+          seo_tags:
+            label: SEO Site Keywords
+            type: tags
+            width: 1/2
+          googleanalytics:
+            label: Google Analytics
+            type: textarea
+            font: monospace
+            size: medium
+            width: 1/2
+
+  content:
+    label: Homepage
+    type: fields
+    fields:
+      homepage_view:
+        label: Homepage View
+        type: headline
+      homepage_order:
+        label: Menu
+        type: pages
+        query: site.children.template("profile")
+        layout: cards
+        size: small
+      footer_view:
+        label: Footer
+        type: headline
+      footer_email_title:
+        label: Embedded Email Title
+        type: text
+        help: mobile title
+        width: 1/2
+      footer_text:
+        label: Footer Text
+        help: Social Links
+        type: textarea
+        size: small
+        width: 1/2
+      footer_page_link:
+        label: Page Link
+        type: select
+        options: query
+        query: site.children.listed
+        width: 1/2
+      footer_copyright:
+        label: Copyright
+        type: text
+        width: 1/2
