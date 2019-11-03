@@ -25,10 +25,6 @@ tabs:
         templates: 
           - issue
 
-      files:
-        headline: Files
-        type: files
-        layout: list
       
       content:
         type: fields
@@ -36,16 +32,6 @@ tabs:
           site_management:
             label: Site Management
             type: headline
-          site_logo:
-            label: Logo File
-            help: (overrides title, SVG)
-            type: files
-            multiple: false
-            width: 1/2
-          placeholder:
-            label: Placeholder SVGs
-            type: files
-            width: 1/2
           seo_image:
             label: Sitewide SEO Image
             type: files
@@ -61,17 +47,17 @@ tabs:
             label: SEO Site Description
             type: textarea
             size: small
-            width: 1/2
+            width: 1/3
           seo_tags:
             label: SEO Site Keywords
             type: tags
-            width: 1/2
+            width: 1/3
           googleanalytics:
             label: Google Analytics
             type: textarea
             font: monospace
             size: medium
-            width: 1/2
+            width: 1/3
 
   content:
     label: Homepage
@@ -83,28 +69,50 @@ tabs:
       homepage_order:
         label: Menu
         type: pages
-        query: site.children.template("profile")
+        query: site.children.template("issue")
         layout: cards
         size: small
+      site_section:
+        label: Site Contents
+        type: headline
+      site_text:
+        label: Site Body
+        type: textarea
+        size: large
       footer_view:
         label: Footer
         type: headline
-      footer_email_title:
-        label: Embedded Email Title
-        type: text
-        help: mobile title
+      credit_columns:
+        label: Credit Columns
+        type: structure
         width: 1/2
-      footer_text:
-        label: Footer Text
+        fields:
+          column_title:
+            label: Column Title
+            type: text
+          column_contents:
+            label: Column Contents
+            type: textarea
+            size: medium
+      footer_links:
+        label: Footer Links
         help: Social Links
-        type: textarea
-        size: small
+        type: structure
         width: 1/2
-      footer_page_link:
-        label: Page Link
-        type: select
-        options: query
-        query: site.children.listed
+        fields:
+          link_url:
+            label: Link URL
+            type: url
+            width: 1/2
+          link_name: 
+            label: Link Title
+            type: text
+            width: 1/2
+      emailform:
+        label: Email Form
+        type: textarea
+        font: monospace
+        size: medium
         width: 1/2
       footer_copyright:
         label: Copyright

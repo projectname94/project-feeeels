@@ -35,3 +35,9 @@ Icon
 # License
 # ---------------
 /site/config/.license
+
+# added by lukas
+# ---------------
+/content/*
+!/content/error/*
+!/content/home/*

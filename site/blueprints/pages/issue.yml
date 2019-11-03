@@ -1,11 +1,47 @@
 title: Issue
-preset: page
-templates:
+files: false
+templates: 
   - entry
-  
-fields:
-  text:
-    label: Text
-    type: textarea
-    size: large
 
+sections:
+      drafts:
+        headline: Drafts
+        type: pages
+        layout: list
+        status: draft
+        templates: 
+          - entry
+
+      published:
+        headline: Published Pages
+        type: pages
+        layout: list
+        status: listed
+        templates: 
+          - entry
+      
+      content:
+        headline: Issue Credits
+        type: fields
+        fields:
+          homepage_order:
+            label: Side Menu
+            type: pages
+            query: page.children.template("entry")
+            layout: cards
+            size: small
+          issue_credits:
+            label: Issue Credits
+            type: headline
+          credit_columns:
+            label: Credit Columns
+            type: structure
+            width: 1/2
+            fields:
+              column_title:
+                label: Column Title
+                type: text
+              column_contents:
+                label: Column Contents
+                type: textarea
+                size: medium
