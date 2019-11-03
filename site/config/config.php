@@ -3,12 +3,16 @@
 return [
   'routes' => [
     [
-      'pattern' => ':any/:all',
+      'pattern' => '(:any)/(:all)',
       'action'  => function ($any, $all) {
         
-      	// check if issue
+      		
+			      	$data = [
+			          'current_entry' => $all
+			        ];                   
 
-      	// check if subpage
+			        return page($any)->render($data);	
+      			      	
 
       }
     ]

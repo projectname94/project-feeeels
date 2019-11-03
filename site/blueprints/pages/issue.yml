@@ -24,7 +24,7 @@ sections:
         headline: Issue Credits
         type: fields
         fields:
-          homepage_order:
+          sidenav_order:
             label: Side Menu
             type: pages
             query: page.children.template("entry")

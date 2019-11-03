@@ -67,14 +67,18 @@ tabs:
         label: Homepage View
         type: headline
       homepage_order:
-        label: Menu
+        label: Issue List
         type: pages
         query: site.children.template("issue")
         layout: cards
         size: small
-      site_section:
-        label: Site Contents
-        type: headline
+        width: 2/3
+      current_issue:
+        label: Current Issue
+        type: pages
+        query: site.children.template("issue")
+        multiple: false
+        width: 1/3
       site_text:
         label: Site Body
         type: textarea

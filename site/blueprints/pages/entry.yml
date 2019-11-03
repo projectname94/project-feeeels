@@ -2,8 +2,17 @@ title: Entry
 preset: page
 pages: false
 fields:
+  entry_color:
+    label: Entry Background Color
+    type: text
+    font: monospace
+    help: accepts hash, rbg(), rgba(), or html color values
+    width: 1/3
+  subtitle:
+    label: Entry Subtitle
+    type: text
+    width: 2/3
   text:
     label: Text
     type: textarea
     size: large
-
