@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", function(){
+  
+  // scroll to open section
+
+  var openSection = document.querySelector(".expanded");
+  if(openSection !== undefined && openSection !== null){
+    scrollTo(openSection);
+  }
+
   var random_num = Math.floor(Math.random() * Math.floor(4));
 
   document.body.classList.add('order_' + random_num);
@@ -6,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function(){
   var expandable = document.body.querySelectorAll('.content');
   [].forEach.call(expandable, function(expand){
     expand.addEventListener('click', function(){
+      updateUrl(expand);
       toggleOpenSection(expand, false);
     });
   });
@@ -15,6 +24,10 @@ document.addEventListener("DOMContentLoaded", function(){
     nav_item.addEventListener('click', toggleSectionWithNav);
   });
 });
+
+function updateUrl(target){
+  history.pushState(null, null, target.dataset.slug);
+}
 
 function toggleSectionWithNav(e){
   console.log('hello1');
@@ -44,6 +57,7 @@ function toggleOpenSection(expanding, close){
     [].forEach.call(document.body.querySelectorAll('.nav_item'), function(content) {
       content.classList.remove('current');
     });
+    console.log('.nav_item' + expanding.dataset.section)
     document.querySelector('.nav_item' + expanding.dataset.section).classList.add('current');
 
     scrollTo(expanding);

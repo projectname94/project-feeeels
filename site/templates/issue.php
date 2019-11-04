@@ -8,9 +8,11 @@
 					'current' => $active_entry
 				]); ?>
 			
-			<?php $counter = 1; ?>
-			<?php foreach($issue->sidenav_order()->toPages() as $entry): ?>
-				<?php $expanded = ($active_entry == $entry->slug()) ? 'expanded' : ''; ?>
+			<?php 
+				$counter = 1; 
+				foreach($issue->sidenav_order()->toPages() as $entry):
+					$expanded = ($active_entry == $entry->slug()) ? 'expanded' : ''; 
+			?>
 				<?= snippet('components/sectionclosed', 
 					[
 						'section' => $entry,
@@ -18,9 +20,10 @@
 						'expanded' => $expanded
 					]) ?>
 
-				<?php $counter++; ?>
-			<?php endforeach; ?>
-		<?php endif; ?>
+				<?php 
+					$counter++;
+				endforeach;
+			endif; ?>
   </main>
   <!-- credit columns -->
 <?php if($issue->credit_columns()->isNotEmpty()): ?>

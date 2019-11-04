@@ -5,4 +5,5 @@ feeeels is a publication that explores art, culture, politics, history, and emot
 
 ## issues
 - [ ] image style needs to be re-introduced w/ kirby text figures
-- [ ] scroll top needs to be resolved for new windows
+- [x] scroll top needs to be resolved for new windows
+- [x] update history api on section click
