@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
 function updateUrl(target){
-  history.pushState(null, null, target.dataset.slug);
+  history.pushState(null, null, '/fuzzy/' + target.dataset.slug);
 }
 
 function toggleSectionWithNav(e){
