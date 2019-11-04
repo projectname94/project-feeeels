@@ -5,7 +5,8 @@
 				[
 					'nav_items' => $issue->sidenav_order()->toPages(), 
 					'sticky' => 'sticky',
-					'current' => $active_entry
+					'current' => $active_entry,
+					'issue' => $issue
 				]); ?>
 			
 			<?php 
