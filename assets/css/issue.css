@@ -242,8 +242,8 @@ main{
   display: block;
 }
 
-.content.expanded .bubble *:not(.expand):not(.image),
-.content:not(.expanded):active .bubble *:not(.expand):not(.image){
+.content.expanded .bubble *:not(.expand):not(img),
+.content:not(.expanded):active .bubble *:not(.expand):not(img){
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -251,15 +251,15 @@ main{
   font-size: 1.4rem;
 }
 
-.content.expanded .bubble .image,
-.content:not(.expanded):active .bubble .image{
+.content.expanded .bubble img,
+.content:not(.expanded):active .bubble img{
   margin-left: 30%;
   width: 45%;
   cursor: zoom-in;
 }
 
-.content.expanded .bubble .image.reference,
-.content:not(.expanded):active .bubble .image.reference{
+.content.expanded .bubble img.reference,
+.content:not(.expanded):active .bubble img.reference{
   margin-left: 30%;
   width: 30%;
   cursor: zoom-in;
@@ -269,8 +269,8 @@ main{
   position: relative;
 }
 
-.content.expanded .bubble .image:active,
-.content:not(.expanded):active .bubble .image:active,
+.content.expanded .bubble img:active,
+.content:not(.expanded):active .bubble img:active,
 .content.expanded .bubble figure:active,
 .content:not(.expanded):active .bubble figure:active{
   margin-left: auto;
@@ -295,7 +295,7 @@ main{
     display: block;
 }
 
-.content .bubble *:not(.image):not(.expand){
+.content .bubble *:not(img):not(.expand){
     color: black;
     /*mix-blend-mode: exclusion;*/
 }
@@ -350,8 +350,8 @@ main{
     font-size: 0.2rem;
   }
 
-  .content.expanded .bubble *:not(.expand):not(.image),
-  .content:not(.expanded):active .bubble *:not(.expand):not(.image){
+  .content.expanded .bubble *:not(.expand):not(img),
+  .content:not(.expanded):active .bubble *:not(.expand):not(img){
     margin-left: 6%;
     width: 90%;
     font-size: 1.15rem;
