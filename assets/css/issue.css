@@ -305,6 +305,10 @@ main{
     display: block;
 }
 
+.content .bubble figure:not(.expand) img{
+  width: 100%;
+}
+
 .content .bubble *:not(img):not(.expand){
     color: black;
     /*mix-blend-mode: exclusion;*/
