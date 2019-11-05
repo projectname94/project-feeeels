@@ -251,9 +251,17 @@ main{
   font-size: 1.4rem;
 }
 
+.content.expanded .bubble figure{
+  text-align: left;
+}
+
+.content.expanded .bubble figure:active{
+  text-align: center;
+}
+
 .content.expanded .bubble img,
 .content:not(.expanded):active .bubble img{
-  margin-left: 30%;
+  margin-left: 10%;
   width: 45%;
   cursor: zoom-in;
 }
@@ -305,7 +313,7 @@ main{
     display: block;
 }
 
-.content .bubble figure:not(.expand) img{
+.content:not(.expanded) .bubble figure:not(.expand) img{
   width: 100%;
 }
 
