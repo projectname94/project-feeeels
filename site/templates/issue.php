@@ -14,7 +14,7 @@
 				foreach($issue->sidenav_order()->toPages() as $entry):
 					$expanded = ($active_entry == $entry->slug()) ? 'expanded' : ''; 
 			?>
-				<?= snippet('components/sectionclosed', 
+				<?= snippet('components/sectionentry', 
 					[
 						'section' => $entry,
 						'sectioncount' => $counter,
