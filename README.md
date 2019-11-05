@@ -7,3 +7,4 @@ feeeels is a publication that explores art, culture, politics, history, and emot
 - [ ] image style needs to be re-introduced w/ kirby text figures
 - [x] scroll top needs to be resolved for new windows
 - [x] update history api on section click
+- [ ] x overscroll on issue page (Mozilla)
