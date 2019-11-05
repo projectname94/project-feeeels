@@ -288,7 +288,17 @@ main{
   flex-wrap: wrap;
 }
 
-.content .bubble *:not(.expand){
+.content .bubble h1:not(.expand),
+.content .bubble h2:not(.expand),
+.content .bubble h3:not(.expand),
+.content .bubble h4:not(.expand),
+.content .bubble h5:not(.expand),
+.content .bubble h6:not(.expand),
+.content .bubble ul:not(.expand),
+.content .bubble li:not(.expand),
+.content .bubble p:not(.expand),
+.content .bubble p:not(.expand),
+.content .bubble figure:not(.expand){
     width: 20%;
     padding: 1rem;
     box-sizing: border-box;
