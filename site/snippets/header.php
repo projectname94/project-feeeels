@@ -20,7 +20,9 @@
 		.nav_item{ height: <?= $proportion ?>; }
 		.nav_item span{ line-height: <?= $proportion ?>; }
 		.content{ max-height: <?= $proportion ?>; }
+
 	</style>
+	<?= snippet('header/issuefonts') ?>
 </head>
 <body <?= ($page->template() == 'issue') ? 'class="issue"' : '' ?> >
 

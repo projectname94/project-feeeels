@@ -6,7 +6,8 @@
 					'nav_items' => $issue->sidenav_order()->toPages(), 
 					'sticky' => 'sticky',
 					'current' => $active_entry,
-					'issue' => $issue
+					'issue' => $issue,
+					'issue_title' => $issue->title()->slug()
 				]); ?>
 			
 			<?php 
@@ -18,7 +19,10 @@
 					[
 						'section' => $entry,
 						'sectioncount' => $counter,
-						'expanded' => $expanded
+						'expanded' => $expanded,
+						'issueclass' => 'issue_class_'.$issue->title()->slug(),
+						'issuetitle' => 'issue_primary_'.$issue->title()->slug(),
+						'issuebody' => 'issue_body_'.$issue->title()->slug()
 					]) ?>
 
 				<?php 
@@ -31,7 +35,8 @@
 	<?= snippet('components/creditcolumns', 
 		[ 
 			'credit_title' => 'Colophon',
-			'credit_columns' => $issue->credit_columns()
+			'credit_columns' => $issue->credit_columns(),
+			'issueclass' => 'issue_class_'.$issue->title()->slug()
 		]) ?>
 <?php endif; ?>
 

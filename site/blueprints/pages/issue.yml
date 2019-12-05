@@ -1,5 +1,5 @@
 title: Issue
-files: false
+files: true
 templates: 
   - entry
 
@@ -19,6 +19,11 @@ sections:
         status: listed
         templates: 
           - entry
+      
+      files:
+        headline: Issue Fonts
+        type: files
+        template: list
       
       content:
         headline: Issue Credits
@@ -45,3 +50,27 @@ sections:
                 label: Column Contents
                 type: textarea
                 size: medium
+          fonts: 
+            label: Issue Fonts
+            type: headline
+          primaryfonttitle:
+            label: Headline Font Name
+            type: text
+            converter: slug
+            width: 1/2
+          primaryfontfile:
+            label: Headline Font File
+            type: files
+            multiple: false
+            width: 1/2
+          bodyfonttitle:
+            label: Body Font Name
+            type: text
+            converter: slug
+            width: 1/2
+          bodyfontfile:
+            label: Body Font File
+            type: files
+            multiple: false
+            width: 1/2
+
