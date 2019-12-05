@@ -225,6 +225,67 @@ main{
   padding-top:6rem;
 }
 
+/* footnotes css */
+
+
+.footnote_button{
+  position: relative;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-right: 0.25rem;
+}
+.footnote_button sup{
+  line-height: 1rem;
+  top: 0;
+  font-size: 1rem;
+}
+
+.content .entry_footnotes{
+  display: none;
+}
+
+.content.expanded .entry_footnotes{
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 4rem;
+}
+
+@media(max-width: 768px){
+  .content.expanded .entry_footnotes{
+    width: 90%;
+    margin-left: 6%;
+  }  
+}
+
+.footnote{
+  margin-bottom: 1rem;
+}
+
+.footnote sup{
+  display: inline;
+}
+
+.footnote sup + *:not(figure){
+  display: inline;
+}
+
+.footnote{
+  text-align: left;
+}
+
+
+/* end of footnotes css */
+
+
 .content:not(.expanded) .expand{
   display: block;
   position: absolute;
@@ -242,7 +303,7 @@ main{
   display: block;
 }
 
-.content.expanded .bubble *:not(.expand):not(img),
+.content.expanded .bubble *:not(.expand):not(img):not(button):not(sup),
 .content:not(.expanded):active .bubble *:not(.expand):not(img){
   margin-left: auto;
   margin-right: auto;
@@ -323,7 +384,7 @@ main{
 }
 
 .bubble_item,
-.bubble *{
+.bubble *:not(button){
   margin-bottom: 2rem;
 }
 
@@ -372,7 +433,7 @@ main{
     font-size: 0.2rem;
   }
 
-  .content.expanded .bubble *:not(.expand):not(img),
+  .content.expanded .bubble *:not(.expand):not(img):not(button):not(sup),
   .content:not(.expanded):active .bubble *:not(.expand):not(img){
     margin-left: 6%;
     width: 90%;
@@ -386,3 +447,5 @@ main{
     margin-right: 10%;
   }
 }
+
+

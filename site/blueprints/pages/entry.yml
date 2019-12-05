@@ -16,3 +16,30 @@ fields:
     label: Text
     type: textarea
     size: large
+  footnotes:
+    label: Footnotes
+    type: structure
+    fields:
+      title:
+        label: Internal ID
+        help: (used for internal linking in your interview section)
+        type: text
+        converter: slug
+        width: 1/3
+      character:
+        label: Character
+        help: (used for external identification)
+        type: text
+        width: 1/3
+      footnote:
+        label: Footnote Caption
+        type: textarea
+        size: small
+  interview_commands:
+    label: Inline Commands
+    type: info
+    theme: positive
+    text: |
+      #### Footnotes:
+        (`footnote: <FOOTNOTE CHARACTER> internalid: <INTERNAL ID> text: Visible text`)
+        <br />

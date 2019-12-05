@@ -9,4 +9,9 @@
   <div class="bubble">
     <?= $section->text()->kt() ?>
   </div>
+  <?php 
+  	if($section->footnotes()->exists() && $section->footnotes()->isNotEmpty()):
+  		snippet('components/footnotes', ['sectioncount' => $sectioncount, 'footnotes' => $section->footnotes()]); 
+  	endif;
+  ?>
 </section>
