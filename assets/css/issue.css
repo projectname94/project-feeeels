@@ -259,13 +259,6 @@ main{
   padding-bottom: 4rem;
 }
 
-@media(max-width: 768px){
-  .content.expanded .entry_footnotes{
-    width: 90%;
-    margin-left: 6%;
-  }  
-}
-
 .footnote{
   margin-bottom: 1rem;
 }
@@ -425,6 +418,11 @@ main{
 }
 
 @media (max-width: 768px){
+  .content.expanded .entry_footnotes{
+    width: 90%;
+    margin-left: 6%;
+  }  
+
   main{
     width: 100%;
   }
