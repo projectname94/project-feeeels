@@ -327,6 +327,19 @@ main{
   cursor: zoom-in;
 }
 
+.content.expanded .bubble .large img,
+.content:not(.expanded):active .bubble .large img{  
+  width: 75%;
+  cursor: zoom-in;
+}
+
+.content.expanded .bubble .large:active img,
+.content:not(.expanded):active .bubble .large:active img{
+  margin-left: -10%;  
+  width: 120%;
+  cursor: zoom-out;
+}
+
 .content.expanded{
   position: relative;
 }
