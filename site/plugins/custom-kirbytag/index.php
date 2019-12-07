@@ -15,10 +15,19 @@ Kirby::plugin('your/plugin', [
         'audio' => [
             'attr' => [
             'audio',
-            'subtitle'
+            'caption'
             ],
             'html' => function($tag) {
-                return '<figure><audio controls class="audio_item"><source src="'.$tag->audio.'" type="audio/mpeg">Your browser does not support the audio element.</audio><figcaption>'.$tag->subtitle.'</figcaption></figure>';
+                return '<figure><audio controls class="audio_item"><source src="'.$tag->audio.'" type="audio/mpeg">Your browser does not support the audio element.</audio><figcaption>'.$tag->caption.'</figcaption></figure>';
+            }
+        ],
+        'videoembed' => [
+            'attr' => [
+            'videoembed',
+            'caption'
+            ],
+            'html' => function($tag) {
+                return '<figure><video controls class="video_item"><source src="'.$tag->videoembed.'" type="video/mp4">Your browser does not support the video element.</video><figcaption>'.$tag->caption.'</figcaption></figure>';
             }
         ]
     ]

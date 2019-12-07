@@ -317,6 +317,7 @@ a.issue_body_link{
 .content:not(.expanded):active .bubble *:not(.expand):not(img),
 .content:not(.expanded):focus-within .bubble *:not(.expand):not(img),
 .content.expanded .bubble *:not(.expand):not(img):not(audio):not(figcaption):not(button):not(sup),
+.content.expanded .bubble *:not(.expand):not(img):not(audio):not(video):not(figcaption):not(button):not(sup),
 .content:not(.expanded):active .bubble *:not(.expand):not(img){
   margin-left: auto;
   margin-right: auto;
@@ -333,9 +334,20 @@ a.issue_body_link{
   display: none;
 }
 
+.content .bubble figure video{
+  display: none;
+}
+
 .content.expanded .bubble figure audio{
   display: block;
   width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.content.expanded .bubble figure video{
+  display: block;
+  width: 100%;
+  height: 100%;
   margin-bottom: 0.25rem;
 }
 
@@ -503,7 +515,7 @@ a.issue_body_link{
     font-size: 0.2rem;
   }
 
-  .content.expanded .bubble *:not(.expand):not(img):not(button):not(sup):not(audio):not(figcaption),
+  .content.expanded .bubble *:not(.expand):not(img):not(button):not(sup):not(audio):not(video):not(figcaption),
   .content:not(.expanded):active .bubble *:not(.expand):not(img){
     margin-left: 6%;
     width: 90%;
