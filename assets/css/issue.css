@@ -309,9 +309,14 @@ main{
   text-align: left;
 }
 
+.content .bubble figure audio{
+  display: none;
+}
+
 .content.expanded .bubble figure audio{
+  display: block;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
 }
 
 .content.expanded .bubble figure figcaption{
@@ -475,7 +480,7 @@ main{
     font-size: 0.2rem;
   }
 
-  .content.expanded .bubble *:not(.expand):not(img):not(button):not(sup),
+  .content.expanded .bubble *:not(.expand):not(img):not(button):not(sup):not(audio):not(figcaption),
   .content:not(.expanded):active .bubble *:not(.expand):not(img){
     margin-left: 6%;
     width: 90%;
