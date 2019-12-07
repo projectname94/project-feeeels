@@ -43,3 +43,7 @@ fields:
       #### Footnotes:
         (`footnote: <FOOTNOTE CHARACTER> internalid: <INTERNAL ID> text: Visible text`)
         <br />
+        (`audio: <AUDIO FILE> caption: Visible text`)
+        <br />
+        (`videoembed: <VIDEO FILE> caption: Visible text`)
+
