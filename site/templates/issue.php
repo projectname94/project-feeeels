@@ -1,5 +1,9 @@
 <?= snippet('header') ?>
-	<main id="issue_content_wrapper">
+	<a href="<?= $site->url() ?>" id="home_link">
+		<span class="<?= 'issue_primary_'.$issue->title()->slug() ?>" id="home_link_text">Home</span>
+		<span id="home_image" style="background-image: url(<?= $issue->homephoto()->toFile()->resize(1400)->url() ?>)"></span>
+	</a>
+	<main id="issue_content_wrapper">	
     <?php if($issue->sidenav_order()->isNotEmpty()): ?>				
 			<?=  snippet('components/sidenav', 
 				[

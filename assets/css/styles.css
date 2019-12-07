@@ -86,6 +86,73 @@ h3{
   text-align: center;
 }
 
+#home_link{
+  display: block;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10%;
+  box-sizing: border-box;
+  background-color: transparent;
+  overflow: hidden;
+  mix-blend-mode: difference;
+}
+
+#home_link:active,
+#home_link:focus{
+  width: 90%;
+}
+
+#home_link:active #home_link_text,
+#home_link:focus #home_link_text{
+  display: none;
+}
+
+#home_link_text{
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: black;
+  z-index: 10;
+  text-decoration: none;
+}
+
+#home_image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  filter: contrast(1000) grayscale(100%);
+  background-size: cover;
+  background-position: left center;
+}
+
+@media(max-width: 767px){
+  #home_link{
+    width: 10%;
+    mix-blend-mode: difference;
+  }
+  #home_image{
+    opacity: 1;
+  }
+  #home_link_text{
+    position: absolute;
+    left: 50%;
+    width: auto;
+    font-size: 1rem;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+}
+
 .issue{
   font-family: 'feeeels_fuzzyregular', Arial, sans-serif;
   color: black;
@@ -295,7 +362,6 @@ nav:hover .nav_item:not(.current):hover span{
 
 @media(max-width: 768px){
   #colophon{
-    margin-left: 0;
     width: 90%;
     padding-right: 0;
   }
@@ -420,7 +486,7 @@ section.quarter p, .content p{
 
 section.full form input, footer form input, .primary_button, .expand, ::-webkit-scrollbar-thumb{
 	-moz-appearance: none;
--webkit-appearance: none;
+  -webkit-appearance: none;
   border: solid 1px black;
 	border-radius: 2rem;
 	background-color: transparent;
@@ -472,6 +538,9 @@ section.quarter{
 
 
 @media(max-width: 768px){
+  html,body{
+    font-size: 13px;
+  }
 	section.full p, section.full ul, section.full form, .issue_link{
 		margin: 0 auto;
 		width: 90%;    

@@ -21,7 +21,7 @@ sections:
           - entry
       
       files:
-        headline: Issue Fonts
+        headline: Issue Files
         type: files
         template: list
       
@@ -35,6 +35,12 @@ sections:
             query: page.children.template("entry")
             layout: cards
             size: small
+          homephoto:
+            label: Back to home photo
+            width: 1/2
+            type: files
+            layout: cards
+            max: 1
           issue_credits:
             label: Issue Credits
             type: headline
@@ -53,6 +59,7 @@ sections:
           fonts: 
             label: Issue Fonts
             type: headline
+            multiple: false
           primaryfonttitle:
             label: Headline Font Name
             type: text
