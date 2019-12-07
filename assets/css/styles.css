@@ -19,6 +19,42 @@
 /*=======================================*/
 /*=======================================*/
 
+@media (hover: hover){
+  .issue_link:hover, .issue_link:active{
+    background-color: black;
+  }
+  .issue_link:hover a{
+    color: white;
+  }
+  nav:hover .nav_item:not(.current):hover:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 90vw;
+    height: 100%;
+    background-color: inherit;
+    pointer-events: none;
+    z-index: -1;
+  }
+  .nav_item:hover:after{
+    border-bottom-left-radius: 2rem;
+  }
+  nav:hover .nav_item:not(.current):hover span{
+    opacity: 1;
+  }
+  .nav_item:hover:before{
+    font-size: 4rem;
+  }
+
+  .nav_item:hover{
+    cursor: pointer;
+  }
+  section.full form input.Subscribe:hover, .expand:hover{
+    background-color: rgb(214, 214, 214);
+  }
+}
+
 .site_credits{
   box-sizing: border-box;
   width: 80%;
@@ -183,13 +219,6 @@ h3{
   color: black;
 }
 
-.issue_link:hover, .issue_link:active{
-  background-color: black;
-}
-.issue_link:hover a{
-  color: white;
-}
-
 p, ul{
   font-family: 'Lausanne-300', Arial, sans-serif;
   font-size: 1rem;
@@ -223,18 +252,6 @@ nav{
   z-index: 100;
 }
 
-nav:hover .nav_item:not(.current):hover:after{
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 90vw;
-  height: 100%;
-  background-color: inherit;
-  pointer-events: none;
-  z-index: -1;
-}
-
 @media(any-hover: none ){
   nav:active .nav_item:after{
     content: '';
@@ -249,10 +266,6 @@ nav:hover .nav_item:not(.current):hover:after{
   }
 }
 
-.nav_item:hover:after{
-  border-bottom-left-radius: 2rem;
-}
-
 
 .nav_item span{
   position: absolute;
@@ -265,10 +278,6 @@ nav:hover .nav_item:not(.current):hover:after{
   font-size: 1rem;
   text-transform: uppercase;
   font-family: 'feeeels_fuzzyregular', Arial, sans-serif;
-}
-
-nav:hover .nav_item:not(.current):hover span{
-  opacity: 1;
 }
 
 .nav_item{
@@ -296,14 +305,6 @@ nav:hover .nav_item:not(.current):hover span{
   font-size: 2rem;
   transform: translate(50%, -50%);
   opacity: 1;
-}
-
-.nav_item:hover:before{
-  font-size: 4rem;
-}
-
-.nav_item:hover{
-  cursor: pointer;
 }
 
 .nav_item span{
@@ -508,11 +509,6 @@ footer form input.Subscribe, .primary_button, .expand, ::-webkit-scrollbar-thumb
 	background-color: rgba(255,255,255,0.8);
 }
 
-@media(any-hover: hover){
-	section.full form input.Subscribe:hover, .expand:hover{
-		background-color: rgb(214, 214, 214);
-	}
-}
 
 section.half{
 	display: inline-block;
