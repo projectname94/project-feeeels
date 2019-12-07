@@ -12,12 +12,12 @@ document.addEventListener("DOMContentLoaded", function(){
   document.body.classList.add('order_' + random_num);
 
   var expandable = document.body.querySelectorAll('.content');
-  [].forEach.call(expandable, function(expand){
-    expand.addEventListener('click', function(){
-      updateUrl(expand);
-      toggleOpenSection(expand, false);
-    });
-  });
+  // [].forEach.call(expandable, function(expand){
+  //   expand.addEventListener('click', function(){
+  //     updateUrl(expand);
+  //     toggleOpenSection(expand, false);
+  //   });
+  // });
 
   var nav_items = document.body.querySelectorAll('.nav_item');
   [].forEach.call(nav_items, function(nav_item){
