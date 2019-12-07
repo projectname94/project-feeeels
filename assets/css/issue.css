@@ -315,7 +315,9 @@ a.issue_body_link{
 
 .content.expanded .bubble *:not(.expand):not(img):not(button):not(sup),
 .content:not(.expanded):active .bubble *:not(.expand):not(img),
-.content:not(.expanded):focus-within .bubble *:not(.expand):not(img){
+.content:not(.expanded):focus-within .bubble *:not(.expand):not(img),
+.content.expanded .bubble *:not(.expand):not(img):not(audio):not(figcaption):not(button):not(sup),
+.content:not(.expanded):active .bubble *:not(.expand):not(img){
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -326,6 +328,24 @@ a.issue_body_link{
 .content.expanded .bubble figure{
   text-align: left;
 }
+
+.content .bubble figure audio{
+  display: none;
+}
+
+.content.expanded .bubble figure audio{
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.content.expanded .bubble figure figcaption{
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+}
+
+
 
 .content.expanded .bubble figure:active{
   text-align: center;
@@ -483,7 +503,7 @@ a.issue_body_link{
     font-size: 0.2rem;
   }
 
-  .content.expanded .bubble *:not(.expand):not(img):not(button):not(sup),
+  .content.expanded .bubble *:not(.expand):not(img):not(button):not(sup):not(audio):not(figcaption),
   .content:not(.expanded):active .bubble *:not(.expand):not(img){
     margin-left: 6%;
     width: 90%;

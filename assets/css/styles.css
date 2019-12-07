@@ -341,6 +341,12 @@ nav{
   box-sizing: border-box;
 }
 
+@media(max-width: 768px){
+  .colophon_section{
+    width: 50%;
+  }
+}
+
 .colophon_content *{
   line-height: 1.2em;
   letter-spacing: -0.05em;
