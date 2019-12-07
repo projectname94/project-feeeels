@@ -41,6 +41,7 @@
 
 				<?= '.issue_class_'.$titleSlug ?> p,
 				<?= '.issue_class_'.$titleSlug ?> button,
+				<?= '.issue_class_'.$titleSlug ?> figcaption,
 				<?= '.issue_class_'.$titleSlug ?> .colophon_content *{
 					font-family: <?= $issue->bodyfonttitle() ?>;
 				}

@@ -296,7 +296,7 @@ main{
   display: block;
 }
 
-.content.expanded .bubble *:not(.expand):not(img):not(button):not(sup),
+.content.expanded .bubble *:not(.expand):not(img):not(audio):not(figcaption):not(button):not(sup),
 .content:not(.expanded):active .bubble *:not(.expand):not(img){
   margin-left: auto;
   margin-right: auto;
@@ -308,6 +308,19 @@ main{
 .content.expanded .bubble figure{
   text-align: left;
 }
+
+.content.expanded .bubble figure audio{
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.content.expanded .bubble figure figcaption{
+  font-size: 1rem;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+}
+
+
 
 .content.expanded .bubble figure:active{
   text-align: center;
