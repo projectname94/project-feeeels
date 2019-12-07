@@ -172,23 +172,6 @@ h3{
   background-position: left center;
 }
 
-@media(max-width: 767px){
-  #home_link{
-    width: 10%;
-    mix-blend-mode: difference;
-  }
-  #home_image{
-    opacity: 1;
-  }
-  #home_link_text{
-    position: absolute;
-    left: 50%;
-    width: auto;
-    font-size: 1rem;
-    transform: translateX(-50%) rotate(-90deg);
-  }
-}
-
 .issue{
   font-family: 'feeeels_fuzzyregular', Arial, sans-serif;
   color: black;
@@ -361,18 +344,6 @@ nav{
   letter-spacing: -0.05em;
 }
 
-@media(max-width: 768px){
-  #colophon{
-    width: 90%;
-    padding-right: 0;
-  }
-
-  .colophon_section{
-    width: 50%;
-  }
-  
-}
-
 
 /*
  *
@@ -398,28 +369,6 @@ nav{
   position: absolute;
 }
 
-
-@media(max-width: 1440px){
-body, html{
-  font-size: 14px;
-}
-body{
-  /*width: 80rem;*/
-
-}
-}
-
-@media(max-width: 1280px){
-  body{
-    /*width: 70rem;*/
-  }
-}
-
-@media(max-width: 900px){
-  body{
-    width: 100%;
-  }
-}
 
 section.half,
 section.quarter{
@@ -526,38 +475,6 @@ section.quarter{
 	vertical-align: top;
 }
 
-@media(max-width: 900px){
-	section.quarter{
-		width: 47%;
-	}
-}
-
-
-@media(max-width: 768px){
-  html,body{
-    font-size: 13px;
-  }
-	section.full p, section.full ul, section.full form, .issue_link{
-		margin: 0 auto;
-		width: 90%;    
-    font-size: 1.15rem;
-	}
-
-  .issue_link{
-    margin-top: 2rem;
-  }
-
-	section.quarter{
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-	}
-
-	section.quarter p, .content p{
-		width: 95%;
-	}
-}
-
 
 footer{
   display: flex;
@@ -577,29 +494,82 @@ section.col_2{
 }
 
 footer form{
-    display: flex;
+  display: flex;
+}
 
+footer form input{
+  max-width: 50%;
+  margin-right: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-right: -1px;
+}
+
+footer form input:not(.Subscribe){
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@media(max-width: 1440px){
+body, html{
+  font-size: 14px;
+}
+}
+
+@media(max-width: 900px){
+  body{
+    width: 100%;
   }
 
-  footer form input{
-    max-width: 50%;
-    margin-right: 0;
-    border-top-right-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-right: -1px;
+  section.quarter{
+    width: 47%;
   }
-
-  footer form input:not(.Subscribe){
-    border-top-left-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-
-  }
+}
 
 @media(max-width: 768px){
+  html,body{
+    font-size: 13px;
+  }
+
+  #home_link{
+    width: 10%;
+    mix-blend-mode: difference;
+  }
+  #home_image{
+    opacity: 1;
+  }
+  #home_link_text{
+    position: absolute;
+    left: 50%;
+    width: auto;
+    font-size: 1rem;
+    transform: translateX(-50%) rotate(-90deg);
+  }
+
+  section.full p, section.full ul, section.full form, .issue_link{
+    margin: 0 auto;
+    width: 90%;    
+    font-size: 1.15rem;
+  }
+
+  .issue_link{
+    margin-top: 2rem;
+  }
+
+  section.quarter{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  section.quarter p, .content p{
+    width: 95%;
+  }
+
   footer{
     width: calc(90% - 1rem);
     margin-left: auto;
