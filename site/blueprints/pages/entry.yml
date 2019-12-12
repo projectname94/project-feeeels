@@ -42,8 +42,11 @@ fields:
     text: |
       #### Footnotes:
         (`footnote: <FOOTNOTE CHARACTER> internalid: <INTERNAL ID> text: Visible text`)
-        <br />
+      #### Audio File:
         (`audio: <AUDIO FILE> caption: Visible text`)
-        <br />
+      #### Video File:
         (`videoembed: <VIDEO FILE> caption: Visible text`)
+      #### Image File:
+        (`image: <IMAGe FILE> class: large`)
+        where `class: large` is optional
 
