@@ -463,6 +463,10 @@ section.full form input, footer form input, .primary_button, .expand, ::-webkit-
   box-sizing: border-box;
 }
 
+.primary_button{
+  padding-bottom: 0.43rem;
+}
+
 footer form input.Subscribe, .primary_button, .expand, ::-webkit-scrollbar-thumb{
 	cursor: pointer;
 	background-color: rgba(255,255,255,0.8);
