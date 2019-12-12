@@ -525,7 +525,8 @@ footer form input{
 #mc_embed_signup div.mce_inline_error{
   background-color: transparent !important;
   font-weight: normal;
-  color: red !important;
+  color: darkgray !important;
+  font-family: sans;
 }
 
 @media(max-width: 1440px){
