@@ -78,6 +78,7 @@ a{
   color: black;
   padding-left: 0.2rem;
   padding-right: 0.2rem;
+  box-sizing: border-box;
   background-color: rgb(214, 214, 214);
   text-decoration: none;
 }
@@ -459,6 +460,7 @@ section.full form input, footer form input, .primary_button, .expand, ::-webkit-
 	margin-right: 1rem;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
+  box-sizing: border-box;
 }
 
 footer form input.Subscribe, .primary_button, .expand, ::-webkit-scrollbar-thumb{
