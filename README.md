@@ -16,4 +16,4 @@ This method was chosen for its physical implications: by letting the browser rel
 
 <hr>
 
-1. <img src="assets/images/spinner.gif" width='100px' height='100px' >
+1.<br><img src="assets/images/spinner.gif" width='100px' height='100px' >
