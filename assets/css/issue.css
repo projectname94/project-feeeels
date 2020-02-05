@@ -212,6 +212,12 @@ a.issue_body_link{
   background-color: transparent;
 }
 
+.content:active{
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing:  grayscale;
+}
+
 .content:not(.expanded):active,
 .content:not(.expanded):focus-within,
 .content.expanded{

@@ -1,5 +1,5 @@
 <?= snippet('header') ?>
-	<a href="<?= $site->url() ?>" id="home_link">
+	<a href="<?= $site->url() ?>" class="<?= $issue->homephoto()->isNotEmpty() ? 'with_image' : 'without_image' ?>" id="home_link">
 		<span class="<?= 'issue_primary_'.$issue->title()->slug() ?>" id="home_link_text">Home</span>
 		<?php if($issue->homephoto()->isNotEmpty()): ?>
 			<span id="home_image" style="background-image: url(<?= $issue->homephoto()->toFile()->resize(1400)->url() ?>)"></span>

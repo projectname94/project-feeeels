@@ -68,9 +68,6 @@ body, html{
   margin: 0;
   font-size: 16px;
   background-color: rgb(230,230,230);
-  font-smooth: never;
-  -webkit-font-smoothing: none;
-  -moz-osx-font-smoothing:  grayscale;
   /*background-color: rgba(17, 43, 40);*/
   /*color: rgb(214, 214, 214);*/
 }
@@ -124,6 +121,11 @@ h3{
   text-align: center;
 }
 
+.with_image#home_link{
+  mix-blend-mode: difference;
+  -webkit-mix-blend-mode: difference;
+}
+
 #home_link{
   display: block;
   position: fixed;
@@ -135,7 +137,6 @@ h3{
   box-sizing: border-box;
   background-color: transparent;
   overflow: hidden;
-  mix-blend-mode: difference;
 }
 
 #home_link:active,
